@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backend Journey</title>
+  <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Cinzel+Decorative:700" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <!-- Шапка сайта -->
+  <header>
+    <h1>Backend Journey</h1>
+    <img src="images/profile.jpg" alt="Логотип или фото профиля">
+    <nav>
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#posts">Блог</a></li>
+        <li><a href="#projects">Мои проекты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Раздел "Обо мне" -->
+    <section id="about">
+      <h2>Обо мне</h2>
+      <p>Привет! Меня зовут Игорь, мне 19 лет, и я начинающий Python-разработчик. Работаю в области бэкенда, имею опыт с HTML/CSS, PostgreSQL и Linux. Увлечен созданием веб-приложений и изучением технологий.</p>
+    </section>
+
+    <!-- Раздел "Блог" -->
+    <section id="posts">
+      <h2>Блог</h2>
+      <input type="text" id="search-input" placeholder="Поиск по статьям...">
+      <select id="category-filter">
+        <option value="">Все категории</option>
+        <option value="Networking">Networking</option>
+        <option value="Linux">Linux</option>
+      </select>
+      <p id="article-count"></p> <!-- Тут будет показываться количество статей -->
+      <div id="articles">
+        <article data-category="Networking">
+          <h3 class="article-title">Что такое Firewall?</h3>
+          <p>Файрвол (брандмауэр) — это система защиты, которая проверяет входящий и исходящий...</p>
+          <a href="articles/firewall.html" class="read-more">Читать далее...</a>
+        </article>
+        <article data-category="Networking">
+          <h3 class="article-title">Как работает CDN?</h3>
+          <p>CDN (Content Delivery Network) ускоряет загрузку сайтов, распределяя копии контента...</p>
+          <a href="articles/cdn.html" class="read-more">Читать далее...</a>
+        </article>
+        <article data-category="Networking">
+          <h3 class="article-title">Что такое VPN?</h3>
+          <p>VPN (Virtual Private Network) — это технология, которая позволяет создать защищённое соединение...</p>
+          <a href="articles/vpn.html" class="read-more">Читать далее...</a>
+        </article>
+        <article data-category="Networking">
+          <h3 class="article-title">Как работает DNS?</h3>
+          <p>DNS (Domain Name System) — это система, которая преобразует доменные имена...</p>
+          <a href="articles/dns.html" class="read-more">Читать далее...</a>
+        </article>
+        <article data-category="Networking">
+          <h3 class="article-title">Как работает Интернет?</h3>
+          <p>Интернет связывает миллиарды устройств, позволяя им обмениваться данными через сеть...</p>
+          <a href="articles/internet.html" class="read-more">Читать далее...</a>
+        </article>
+        <article data-category="Linux">
+          <h3 class="article-title">Структура файловой системы</h3>
+          <p><strong>/</strong> — root каталог. Содержит в себе всю иерархию системы...</p>
+          <a href="articles/linux1.html" class="read-more">Читать далее...</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Раздел "Мои проекты" -->
+    <section id="projects">
+      <h2>Мои проекты</h2>
+      <p>В этом разделе я рассказываю о своих текущих и будущих проектах. Скоро будет больше информации!</p>
+    </section>
+
+    <!-- Раздел "Контакты" -->
+    <section id="contact">
+      <h2>Контакты</h2>
+      <ul>
+        <li>Email: <a class="link" href="mailto:igor@zemskoff.su">igor@zemskoff.su</a></li>
+        <li>Telegram: <a class="link" href="https://t.me/garik_pro">@garik_pro</a></li>
+        <li>GitHub: <a class="link" href="https://github.com/ZemskovIK" target="_blank">github.com/ZemskovIK</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2024 Igor Zemskov | Все права защищены</p>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
