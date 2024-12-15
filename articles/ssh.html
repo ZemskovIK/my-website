@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSH (Secure Shell)</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Что такое SSH?</h1>
+  </header>
+  <main>
+    <article>
+      <section>
+        <p>
+          <strong>SSH (Secure Shell)</strong> — протокол, позволяющий безопасно подключаться к удалённым серверам, управлять ими и передавать данные.
+        </p>
+      </section>
+
+      <section>
+        <h4>Подключение к серверу</h4>
+        <p>Команда SSH используется для установки соединения:</p>
+        <pre><code>$ ssh [опции] <пользователь>@<адрес_сервера> [команда]</code></pre>
+        <p>Пример:</p>
+        <pre><code>$ ssh user@192.168.0.1</code></pre>
+      </section>
+
+      <section>
+        <h4>Настройки сервера SSH</h4>
+        <p>Настройки находятся в файле:</p>
+        <pre><code>/etc/ssh/sshd_config</code></pre>
+        <h5>Порт SSH</h5>
+        <p>По умолчанию используется порт 22, но для повышения безопасности рекомендуется изменить его:</p>
+        <pre><code>Port <новый_порт></code></pre>
+        <p>После изменения настроек перезапустите сервер SSH:</p>
+        <pre><code>$ sudo systemctl restart ssh</code></pre>
+      </section>
+
+      <section>
+        <h4>Копирование файлов через SSH</h4>
+        <h5>scp (secure copy)</h5>
+        <p>Копирует файлы между локальной машиной и удалённым сервером.</p>
+        <p>Пример 1: Копирование файла на сервер</p>
+        <pre><code>$ scp file.txt user@192.168.0.1:/home/user/</code></pre>
+        <p>Пример 2: Копирование файла с сервера</p>
+        <pre><code>$ scp user@192.168.0.1:/home/user/file.txt .</code></pre>
+        <p>Точка (.) в конце команды означает, что файл будет скопирован в текущую директорию локальной машины.</p>
+      </section>
+
+      <section>
+        <h4>Настройка SSH-сервера</h4>
+        <p>Для установки соединения выполните:</p>
+        <ol>
+          <li><strong>Установите пакет OpenSSH Server</strong></li>
+          <pre><code>$ sudo apt install openssh-server</code></pre>
+          <li><strong>Разрешите порт для SSH (по умолчанию 22)</strong></li>
+          <pre><code>$ sudo ufw allow 22</code></pre>
+          <li><strong>Подключитесь к серверу через SSH</strong></li>
+        </ol>
+      </section>
+    </article>
+    <a class="link" href="../index.html">Назад к главной</a>
+  </main>
+</body>
+</html>
