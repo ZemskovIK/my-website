@@ -114,13 +114,25 @@ footer {
   font-size: 1.4rem;
 }
 
+/* Анимация появления информации */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     gap: 10px;
   }
-
+  
   main {
     width: 95%;
   }

@@ -13,7 +13,7 @@
   <header>
     <h1>Backend Journey</h1>
     <img src="images/profile.jpg" alt="Логотип или фото профиля">
-    <nav>
+    <nav class="menu">
       <ul>
         <li><a href="#about">Обо мне</a></li>
         <li><a href="#posts">Блог</a></li>
@@ -25,13 +25,13 @@
 
   <main>
     <!-- Раздел "Обо мне" -->
-    <section id="about">
+    <section id="about" class="scroll-animate">
       <h2>Обо мне</h2>
       <p id="text">Привет! Меня зовут Игорь, мне 19 лет, и я начинающий Python-разработчик. Работаю в области бэкенда, имею опыт с HTML/CSS, PostgreSQL и Linux. Увлечен созданием веб-приложений и изучением технологий.</p>
     </section>
 
     <!-- Раздел "Блог" -->
-    <section id="posts">
+    <section id="posts" class="scroll-animate">
       <h2>Блог</h2>
       <input type="text" id="search-input" placeholder="Поиск по статьям...">
       <select id="category-filter">
@@ -41,37 +41,37 @@
       </select>
       <p id="article-count"></p> <!-- Тут будет показываться количество статей -->
       <div id="articles">
-        <article data-category="Linux">
+        <article data-category="Linux" class="scroll-animate">
           <h3 class="article-title">Что такое SSH?</h3>
           <p>SSH (Secure Shell) — протокол, позволяющий безопасно подключаться к удалённым серверам...</p>
           <a href="articles/ssh.html" class="read-more">Читать далее...</a>
         </article>
-        <article data-category="Networking">
+        <article data-category="Networking" class="scroll-animate">
           <h3 class="article-title">Что такое Firewall?</h3>
           <p>Файрвол (брандмауэр) — это система защиты, которая проверяет входящий и исходящий...</p>
           <a href="articles/firewall.html" class="read-more">Читать далее...</a>
         </article>
-        <article data-category="Networking">
+        <article data-category="Networking" class="scroll-animate">
           <h3 class="article-title">Как работает CDN?</h3>
           <p>CDN (Content Delivery Network) ускоряет загрузку сайтов, распределяя копии контента...</p>
           <a href="articles/cdn.html" class="read-more">Читать далее...</a>
         </article>
-        <article data-category="Networking">
+        <article data-category="Networking" class="scroll-animate">
           <h3 class="article-title">Что такое VPN?</h3>
           <p>VPN (Virtual Private Network) — это технология, которая позволяет создать защищённое соединение...</p>
           <a href="articles/vpn.html" class="read-more">Читать далее...</a>
         </article>
-        <article data-category="Networking">
+        <article data-category="Networking" class="scroll-animate">
           <h3 class="article-title">Как работает DNS?</h3>
           <p>DNS (Domain Name System) — это система, которая преобразует доменные имена...</p>
           <a href="articles/dns.html" class="read-more">Читать далее...</a>
         </article>
-        <article data-category="Networking">
+        <article data-category="Networking" class="scroll-animate">
           <h3 class="article-title">Как работает Интернет?</h3>
           <p>Интернет связывает миллиарды устройств, позволяя им обмениваться данными через сеть...</p>
           <a href="articles/internet.html" class="read-more">Читать далее...</a>
         </article>
-        <article data-category="Linux">
+        <article data-category="Linux" class="scroll-animate">
           <h3 class="article-title">Структура файловой системы</h3>
           <p><strong>/</strong> — root каталог. Содержит в себе всю иерархию системы...</p>
           <a href="articles/linux1.html" class="read-more">Читать далее...</a>
@@ -80,13 +80,13 @@
     </section>
 
     <!-- Раздел "Мои проекты" -->
-    <section id="projects">
+    <section id="projects" class="scroll-animate">
       <h2>Мои проекты</h2>
       <p>В этом разделе я рассказываю о своих текущих и будущих проектах. Скоро будет больше информации!</p>
     </section>
 
     <!-- Раздел "Контакты" -->
-    <section id="contact">
+    <section id="contact" class="scroll-animate">
       <h2>Контакты</h2>
       <ul>
         <li>Email: <a class="link" href="mailto:igor@zemskoff.su">igor@zemskoff.su</a></li>

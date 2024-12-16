@@ -4,6 +4,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const categoryFilter = document.querySelector('#category-filter');
   const searchInput = document.querySelector('#search-input');
 
+  // Анимация при скролле
+  const scrollElements = document.querySelectorAll('.scroll-animate');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  scrollElements.forEach((el) => observer.observe(el));
+  
   // Функция для отображения только первых 3 статей
   function showLastThreeArticles() {
     articles.forEach((article, index) => {

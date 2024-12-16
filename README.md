@@ -1,1 +1,1 @@
-My first static-website: https://zemskovik.github.io/my-website/
+My first static-website: https://zemskovik.github.io
