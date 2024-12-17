@@ -3,9 +3,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const articleCountText = document.querySelector('#article-count');
   const categoryFilter = document.querySelector('#category-filter');
   const searchInput = document.querySelector('#search-input');
-
-  // Анимация при скролле
   const scrollElements = document.querySelectorAll('.scroll-animate');
+  const techItems = document.querySelectorAll('.tech-item');
+  const descriptionBox = document.getElementById('tech-description');
+
+  techItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      descriptionBox.textContent = item.dataset.description;
+      descriptionBox.style.opacity = '1';
+    });
+
+    item.addEventListener('mouseleave', () => {
+      descriptionBox.style.opacity = '0';
+    });
+  });
 
   const observer = new IntersectionObserver(
     (entries) => {

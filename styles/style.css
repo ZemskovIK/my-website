@@ -126,6 +126,51 @@ footer {
   transform: translateY(0);
 }
 
+/* Секция стека технологий */
+#stack {
+  text-align: center;
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tech-item img {
+  width: 60px;
+  height: 60px;
+}
+
+.tech-item p {
+  margin: 10px 0 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.description-box {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #555;
+  min-height: 30px;
+  transition: opacity 0.3s ease;
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
   nav ul {
